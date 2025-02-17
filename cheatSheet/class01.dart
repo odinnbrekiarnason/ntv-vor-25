@@ -43,6 +43,10 @@ void main(List<String> arguments) {
     4. Capitalise and display the users full name with each word having a capital
     first letter, and the other letters being lowercase.
    */
+  print("what is your full name?");
+  String fullName = stdin.readLineSync().toString();
+  fullName = fullName.toUpperCase();
+  print(fullName);
 
   /*
     5. Display the following SSN on the correct Format:
