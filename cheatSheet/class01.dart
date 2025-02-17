@@ -43,10 +43,16 @@ void main(List<String> arguments) {
     4. Capitalise and display the users full name with each word having a capital
     first letter, and the other letters being lowercase.
    */
-  print("what is your full name?");
-  String fullName = stdin.readLineSync().toString();
-  fullName = fullName.toUpperCase();
-  print(fullName);
+  print("what is your first name?");
+  String firstName = stdin.readLineSync().toString();
+  print("what is your last name?");
+  String lastName = stdin.readLineSync().toString();
+  String fixfullName = firstName.toUpperCase() + " " + lastName.toUpperCase();
+  print("Hi $fixfullName");
+  print(firstName.replaceAll(firstName, "Óðinn") + " " + lastName);
+  print("${firstName[0].toUpperCase()}${firstName.substring(1)} ${lastName[0].toUpperCase()}${lastName.substring(1)}");
+
+
 
   /*
     5. Display the following SSN on the correct Format:
@@ -55,6 +61,13 @@ void main(List<String> arguments) {
   String SSN1 = "200689-2409";
   String SSN2 = "200689 2409";
   String SSN3 = "2 006 8924 09";
+
+  String fixSSN1 = SSN1.replaceAll("-", "");
+  String fixSSN2 = SSN2.replaceAll(" ", "");
+  String fixSSN3 = SSN3.replaceAll(" ", "");
+  print("$fixSSN1");
+  print("$fixSSN2");
+  print("$fixSSN3");
   /*
   Bónus task calculate the age from the SSN.
    */
