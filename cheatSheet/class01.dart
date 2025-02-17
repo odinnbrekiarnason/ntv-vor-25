@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ntv_vor_25/methods.dart';
 void main(List<String> arguments) {
   /*
@@ -6,23 +8,33 @@ void main(List<String> arguments) {
     Hjörtur, would you like to learn Dart strings today?'
     Store Message and Name in seperate variable.
    */
-
+  print("Hvað heitiru?");
+  String firstName = stdin.readLineSync().toString();
+  String message = "tilbúinn í Dart forritun í dag?";
+  print("Hæ $firstName, $message");
   /* 1. Find a quote from a famous person you admire. Print the quote and the name of its
   author. Your output should look something like the following, including the
   quotation marks:
   1. Albert Einstein once said, 'A person who never made a mistake never tried
   anything new.'
   */
-
+  String name = "Albert Einstein";
+  String Message = "'A person who never made a mistake never tried anything new.'";
+  print ("$name once said, $Message");
   /*
     2. Assign a message to a variable, and print that message. Then change the value of
   the variable to a new message, and print the new message.
    */
-
+  String msg = "Headass";
+  print("$msg");
+  msg = "BananaHaus";
+  print("$msg");
   /*
     3.  Remove all the spaces from the rhyme. And print the modified rhyme.
    */
   String NureseryRyhme = "Eena, meena, mina, mo, Catch a mouse by the toe; If he squeals let him go, Eeena, meena, mina, mo.";
+  String fixNureseryRyhme = NureseryRyhme.replaceAll(" ", "");
+  print(fixNureseryRyhme);
   /*
    4. Prompt a user for their full name (first name and last name)
     1. Store the users entry.
