@@ -51,7 +51,7 @@ void main(List<String> arguments) {
   print("Hi $fixfullName");
   print(firstName.replaceAll(firstName, "Óðinn") + " " + lastName);
   print("${firstName[0].toUpperCase()}${firstName.substring(1)} ${lastName[0].toUpperCase()}${lastName.substring(1)}");
-
+//spyrja kennara útí þetta
 
 
   /*
