@@ -25,10 +25,10 @@ void main(List<String> arguments) {
     2. Assign a message to a variable, and print that message. Then change the value of
   the variable to a new message, and print the new message.
    */
-  String msg = "Headass";
-  print("$msg");
-  msg = "BananaHaus";
-  print("$msg");
+  String msg = "Headass breytt?";
+  print(msg);
+  msg = "BananaHaus já";
+  print(msg);
   /*
     3.  Remove all the spaces from the rhyme. And print the modified rhyme.
    */
@@ -44,13 +44,13 @@ void main(List<String> arguments) {
     first letter, and the other letters being lowercase.
    */
   print("what is your first name?");
-  String firstName = stdin.readLineSync().toString();
+  String FirstName = stdin.readLineSync().toString();
   print("what is your last name?");
   String lastName = stdin.readLineSync().toString();
-  String fixfullName = firstName.toUpperCase() + " " + lastName.toUpperCase();
+  String fixfullName = FirstName.toUpperCase() + " " + lastName.toUpperCase();
   print("Hi $fixfullName");
-  print(firstName.replaceAll(firstName, "Óðinn") + " " + lastName);
-  print("${firstName[0].toUpperCase()}${firstName.substring(1)} ${lastName[0].toUpperCase()}${lastName.substring(1)}");
+  print(FirstName.replaceAll(FirstName, "Óðinn") + " " + lastName);
+  print("${FirstName[0].toUpperCase()}${FirstName.substring(1).toLowerCase()} ${lastName[0].toUpperCase()}${lastName.substring(1,).toLowerCase()}");
 //spyrja kennara útí þetta
 
 
@@ -65,9 +65,9 @@ void main(List<String> arguments) {
   String fixSSN1 = SSN1.replaceAll("-", "");
   String fixSSN2 = SSN2.replaceAll(" ", "");
   String fixSSN3 = SSN3.replaceAll(" ", "");
-  print("$fixSSN1");
-  print("$fixSSN2");
-  print("$fixSSN3");
+  print("Án millistriks: $fixSSN1");
+  print("Án millibils: $fixSSN2");
+  print("Án millibils: $fixSSN3");
   /*
   Bónus task calculate the age from the SSN.
    */
@@ -81,5 +81,5 @@ void main(List<String> arguments) {
     return age;
   }
   DateTime birthDate = DateTime(1989, 06, 20);
-  print("Age: ${calculateAge(birthDate)}");
+  print("Aldur: ${calculateAge(birthDate)}");
 }
