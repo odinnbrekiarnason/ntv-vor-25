@@ -71,6 +71,8 @@ void main(List<String> arguments) {
   /*
   Bónus task calculate the age from the SSN.
    */
+
+
   int calculateAge(DateTime birthDate) {
     final today = DateTime.now();
     int age = today.year - birthDate.year;
@@ -82,4 +84,5 @@ void main(List<String> arguments) {
   }
   DateTime birthDate = DateTime(1989, 06, 20);
   print("Aldur: ${calculateAge(birthDate)}");
+
 }

@@ -7,8 +7,7 @@ void main(List<String> arguments) {
   print(personAge);
   if (personAge >= driverLicenseAge && doesPersonHaveDriverLicense == true) {
     print("þú mátt keyra");
-  } else
-  if (personAge >= driverLicenseAge && doesPersonHaveDriverLicense == false) {
+  } else if (personAge >= driverLicenseAge && doesPersonHaveDriverLicense == false) {
     print("þú mátt hringja í ökukennara og byrja læra að keyra");
   }
   else {
