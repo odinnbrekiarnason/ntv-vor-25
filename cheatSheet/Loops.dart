@@ -63,11 +63,11 @@ void main(List<String>  arguments) {
           print("Correct well done it took you $totalGuesses tries");
           yesMan = true;
         }
-         else if (number > intValue == true) {
+         else if (number > intValue) {
           print("To big");
           print("You have ${Maxguesses - totalGuesses} guesses left!");
         }
-         else if (number < intValue == true) {
+         else if (number < intValue) {
           print("To low");
           print("You have ${Maxguesses - totalGuesses} guesses left!");
         }
@@ -79,8 +79,8 @@ void main(List<String>  arguments) {
       }
       if(again.contains("no")){
         playAgain = false;
-      } else {
-        print("please choose yes or no");
+      }else {
+        playAgain = false;
       }
     }
   }
