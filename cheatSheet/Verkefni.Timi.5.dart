@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(){
- /* List<String> toppings = [];
+  List<String> toppings = [];
   print("Hello what would you like on your pizza?\nTo stop adding toppings say quit");
   bool topp = false;
   while(topp == false){
@@ -21,7 +21,7 @@ void main(){
   List<String> pizzas = ["Pepperoni", "Hawaii", "Cheese", "Margherita"];
   for(String pizza in pizzas){
     print("OMG $pizza goog");
-  } print("However all pizzas are great!");*/
+  } print("However all pizzas are great!");
   print("Input your daily calorie intake!");
   String Cal = stdin.readLineSync()?.toLowerCase() ?? "";
 

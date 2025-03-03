@@ -1,19 +1,14 @@
-import "dart:developer";
 import "dart:io";
 import "dart:math";
 
-
-
-void main(List<String>  arguments) {
+void main(List<String> arguments) {
   bool playAgain = true;
   while (playAgain == true) {
     var intValue = Random().nextInt(100);
-    print(
-        "Hello and welcome to my guessing game!\nYou can choose your difficulty\nEasy, Medium or Hard");
+    print("Hello and welcome to my guessing game!\nYou can choose your difficulty\nEasy, Medium or Hard");
     int totalGuesses = 0;
     int Maxguesses = 0;
-
-    print(intValue);
+  print(intValue);
     bool nahMan = false;
     while (nahMan == false) {
       String maxGuesses = stdin.readLineSync()?.toLowerCase() ?? "";
@@ -34,8 +29,7 @@ void main(List<String>  arguments) {
         continue;
       }
     }
-      print(
-          "You have $Maxguesses guesses to choose the correct number!\nYou can choose to leave the game at any time by typing Done");
+      print("You have $Maxguesses guesses to choose the correct number!\nYou can choose to leave the game at any time by typing Done");
       bool yesMan = false;
       while (yesMan == false) {
         RegExp regExp = RegExp(r'^\d+$');
@@ -46,20 +40,21 @@ void main(List<String>  arguments) {
           break;}
         int number = 0;
         if (regExp.hasMatch(guess)){
-        int number = int.parse(guess);
+          number = int.parse(guess);
         print("You guessed: $number");
         totalGuesses = totalGuesses + 1;
         }else{
           print("Please choose a valid number");
           continue;
-        }if (Maxguesses == totalGuesses) {
+        }
+        if (Maxguesses == totalGuesses) {
           print("Game over, out of guesses\nThe number was $intValue");
           break;
         }
         if (Maxguesses - totalGuesses == 1){
           print("Final guess choose wisely");
         }
-        if (number == intValue) {
+         else if (number == intValue) {
           print("Correct well done it took you $totalGuesses tries");
           yesMan = true;
         }
@@ -77,8 +72,9 @@ void main(List<String>  arguments) {
       if (again.contains("yes")){
         continue;
       }
-      if(again.contains("no")){
-        playAgain = false;
+      else if(again.contains("no")){
+        print("Thanks for playing!");
+       playAgain = false;
       }else {
         playAgain = false;
       }

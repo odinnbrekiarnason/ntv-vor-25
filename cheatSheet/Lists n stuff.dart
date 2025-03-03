@@ -34,7 +34,6 @@ void main() {
   for(int j = 10; j >= 0; j--){
     print(j);
   }
-
   List animals = ["giraffe", "elephant", "lion", "pig"];
 
   for(String animal in animals){
@@ -54,7 +53,7 @@ void main() {
         print(num);
       }
     }
-  /*List numbs = [1,2,3,4,5,7,8,2342,348,7845,443];
+  List numbs = [1,2,3,4,5,7,8,2342,348,7845,443];
     List numbs2 = [1,2,5,8,2342,348,443];
     List commonNumbs = [];
 
@@ -66,3 +65,12 @@ void main() {
     }
   }print(commonNumbs);
 }
+
+//fix for burger
+// List<String> bu = ["burger","buttger"];
+//   if(bu.contains("burger")){
+//     print(bu);
+//   }else{
+//     print("nothing happened!");
+//   }
+//also adda i++ fyrir numbered list a burgres!!
