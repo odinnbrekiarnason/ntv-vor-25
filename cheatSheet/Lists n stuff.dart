@@ -53,7 +53,7 @@ void main() {
         print(num);
       }
     }
-  List numbs = [1,2,3,4,5,7,8,2342,348,7845,443];
+  List numbss = [1,2,3,4,5,7,8,2342,348,7845,443];
     List numbs2 = [1,2,5,8,2342,348,443];
     List commonNumbs = [];
 

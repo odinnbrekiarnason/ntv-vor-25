@@ -32,18 +32,17 @@ void main(List<String> arguments) {
       print("You have $Maxguesses guesses to choose the correct number!\nYou can choose to leave the game at any time by typing Done");
       bool yesMan = false;
       while (yesMan == false) {
-        RegExp regExp = RegExp(r'^\d+$');
 
         String? guess = stdin.readLineSync()?.trim().toLowerCase() ?? '';
         if (guess.contains("done")){
           print("You chose to end the game, Better luck next time");
           break;}
         int number = 0;
-        if (regExp.hasMatch(guess)){
+        try{
           number = int.parse(guess);
         print("You guessed: $number");
         totalGuesses = totalGuesses + 1;
-        }else{
+        }catch(e){
           print("Please choose a valid number");
           continue;
         }
