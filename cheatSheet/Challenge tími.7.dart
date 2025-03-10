@@ -1,5 +1,3 @@
-import 'dart:math';
-
 void main(){
   print("The rectangle is 5 long and 8 high, what is the area of the square?");
   int i = 0;
@@ -44,7 +42,6 @@ calcTriangleArea(double tri){
 }
 
 inputSpaceCount(int space){
-  String c = (" ");
   String a = ("this is a string for counting spaces!");
   a.split(" ");
   int i = 0;
