@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 class fact {
@@ -26,10 +27,10 @@ class footBallGame {
   void printMatchFacts(){
     print("====== MATCH SUMMARY ======");
     for(fact matchFact in this.matchFact){
-     print("${matchFact.team.name}- ${matchFact.player.getName()} ${matchFact.action}");
-    print("===========================");
+      print("${matchFact.team.name}- ${matchFact.player.getName()} ${matchFact.action}");
+      print("===========================");
     }
-}
+  }
   void playGame(int minute) {
     this.time = minute;
     Random r1 = new Random();
@@ -45,6 +46,30 @@ class footBallGame {
           fact tempFact = fact(team: this.homeTeam, player: this.homeTeam.players[randomNumber3+1], action: "Skoraði mark");
           this.matchFact.add(tempFact);
           this.homeTeamScore++;
+
+          Random VarCheck = new Random();
+          int Check = VarCheck.nextInt(10);
+          int goalAllowed = 5;
+          if(Check <= 5){
+            print("VAR is reviewing the goal...");
+            sleep(Duration(seconds: 2));
+            Check = VarCheck.nextInt(10);
+            if(Check <= goalAllowed){
+              print("GOAL!");
+            }else if(Check >= goalAllowed);
+            Check = VarCheck.nextInt(5);
+            if(Check <= 3){
+              print ("NO GOAL! It was a foul!");
+              this.matchFact.add(tempFact);
+            } if(Check >= 4) {
+              print("NO GOAL! It was offside!");
+              this.matchFact.add(tempFact);
+            }
+            this.homeTeamScore--;
+          } else{
+            print("Goal valid, the game continues!");
+          }
+
         }else{
           print("Hann klúðraði!");
           fact tempFact = fact(team: this.homeTeam, player: this.homeTeam.players[randomNumber3+1], action: "klúðraði marki!");
@@ -56,7 +81,31 @@ class footBallGame {
           print("Og hann skorar!");
           fact tempFact = fact(team: this.awayTeam, player: this.awayTeam.players[randomNumber3+1], action: "Skoraði mark");
           this.matchFact.add(tempFact);
-        this.awayTeamScore++;
+          this.awayTeamScore++;
+
+          Random VarCheck = new Random();
+          int Check = VarCheck.nextInt(10);
+          int goalAllowed = 5;
+          if(Check <= 5){
+            print("VAR is reviewing the goal...");
+            sleep(Duration(seconds: 2));
+            Check = VarCheck.nextInt(10);
+            if(Check <= goalAllowed){
+              print("GOAL!");
+            }else if(Check >= goalAllowed);
+            Check = VarCheck.nextInt(5);
+            if(Check <= 3){
+              print ("NO GOAL! It was a foul!");
+              this.matchFact.add(tempFact);
+            } if(Check >= 4) {
+              print("NO GOAL! It was offside!");
+              this.matchFact.add(tempFact);
+            }
+            this.awayTeamScore--;
+          } else{
+            print("Goal valid, the game continues!");
+          }
+
         }else{
           print("Hann klúðraði!");
           fact tempFact = fact(team: this.awayTeam, player: this.awayTeam.players[randomNumber3+1], action: "Klúðraði mark");
@@ -125,3 +174,4 @@ bool didHeScore(footballPlayer p1) {
   }
   return result;
 }
+
