@@ -30,6 +30,7 @@ class footBallGame {
     print("===========================");
     }
 }
+
   void playGame(int minute) {
     this.time = minute;
     Random r1 = new Random();
