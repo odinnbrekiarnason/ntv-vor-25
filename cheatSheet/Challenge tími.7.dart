@@ -21,8 +21,8 @@ void main(){
 
 calcRectangleArea(int calc){
   int height = 8;
-  int lengt = 5;
-  int area = height * lengt;
+  int length = 5;
+  int area = height * length;
   return (area);
 }
 
