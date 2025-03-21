@@ -68,7 +68,7 @@ int operatorIndex = findOperatorIndex(input);
 
 int findOperatorIndex(String input){
   for(int i = 0; i < input.length; i++){
-    if (input[i] == "+" || input[i] == "-" || input == "/" || input[i] == "*"){
+    if (input[i] == "+" || input[i] == "-" || input[i] == "/" || input[i] == "*"){
       return i;
     }
   }
