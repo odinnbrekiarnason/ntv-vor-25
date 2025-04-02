@@ -1,0 +1,6 @@
+username;password
+poolari;809268f40d7493f255c9e2d2892308e90bd2cc67b5ee6611882a02f6f7958369
+admin;NotAdmin
+banani;ananas
+rabbabari;slaufa
+ananas;banani
