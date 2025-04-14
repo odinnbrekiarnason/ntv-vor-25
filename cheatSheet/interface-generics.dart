@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:ntv_vor_25/Blackjackprep.dart';
+
 
 /*void main(){
   BMW bmwMongo = BMW("BMW E36");
@@ -214,7 +216,7 @@ class Car implements Vehicle{
   }
 }
 
-class Mototcicle implements Vehicle{
+class Motorcycle implements Vehicle{
   @override
   void start(){
     print("Motorcycle is starting");
@@ -256,7 +258,7 @@ class Garage{
 void main(){
   // Create vehicles from their respective classes
   Truck truck = Truck();
-  Mototcicle mototcicle = Mototcicle();
+  Motorcycle motorcycle = Motorcycle();
   Car car = Car();
 
   // Create a garage for the vehicles
@@ -265,40 +267,58 @@ void main(){
   // Call vehicle methods
   myGarage.addVehicle(truck);
   myGarage.addVehicle(car);
-  myGarage.addVehicle(mototcicle);
+  myGarage.addVehicle(motorcycle);
 
   myGarage.startAll();
 }*/
 
-class Product{
-  String name;
+class Product<T>{
+  T name;
   Product(this.name);
 
-  String getName(){
+  T getName(){
     return name;
   }
 }
-class Inventory<T extends Product> {
-  List<T> items = [];
+class CarParts<T> {
+  T name;
+  CarParts(this.name);
 
+  T getName(){
+    return name;
+  }
+}
+
+class Inventory<T> {
+  List<T> items = [];
 
   void addItem(T item){
     items.add(item);
   }
 
   void showStock(){
+    print("------ STOCK ------");
     for(T item in items){
-      print(item.name);
+      print(item);
     }
+    print("-------------------");
+
   }
+
 }
 
 void main(){
-  Inventory myInventory = Inventory();
+  Inventory<Product<String>> myInventory = Inventory();
+  Inventory<CarParts<String>> carPartsInventory = Inventory();
 
   myInventory.addItem(Product("Shampoo"));
   myInventory.addItem(Product("Apple"));
+
+  carPartsInventory.addItem(CarParts("alternator"));
+
+  carPartsInventory.showStock();
   myInventory.showStock();
+  carPartsInventory.items[0].getName();
 }
 
 // Summary
